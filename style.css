@@ -1,0 +1,184 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    overflow-x: hidden;
+}
+::-webkit-scrollbar{
+    width: 0px;
+}
+.wrapper{
+    height: 100vh;
+    overflow-x: hidden;
+}
+.first_group{
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+}
+.first_group::after{
+    content: '';
+    position: absolute;
+    top:0;
+    height: 100%;
+    width: 100%;
+    background: radial-gradient(rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.8)  60%);
+    z-index: 10;
+}
+.front_image{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    z-index:1;
+}
+.back_image{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    top:0;
+    z-index:-1;
+}
+.main_heading{
+    position: absolute;
+    margin: 0;
+    top: 20.6vw; /*260px*/
+    left: 9.5vw; /*120px*/
+    font-size: 7.1vw; /*90px*/
+    color: white;
+    letter-spacing: 0.8vw; /*10px*/
+    text-shadow: 0px 0px 15px white, 2px 2px 15px rgb(196, 255, 196);
+}
+.sub_heading{
+    position: absolute;
+    margin: 0;
+    top: 12.7vw; /*160px*/
+    left: 9.5vw; /*120px*/
+    font-size: 2.4vw; /*30px*/
+    color:white;
+    letter-spacing: 0.8vw; /*10px*/
+    text-shadow: 0px 0px 15px white, 2px 2px 15px rgb(196, 255, 196);
+}
+.second_group::before{
+    content: '';
+    position: absolute;
+    top: -6vw; /*75px*/
+    width: 100vw;
+    height: 12vw; /*150px*/
+    background-color: black;
+    z-index: 10;
+    background: linear-gradient(rgba(0, 0, 0, 0), black, rgba(0, 0, 0, 0));
+}
+.second_group{
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    background-image: url(images/pexels-magda-ehlers-6364585_1280×570.jpg);
+    background-size: 100vw 100vh;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.second_group::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background: radial-gradient(rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.8) 60%)
+}
+.second_group_text{
+    position: relative;
+    font-size: 1.3vw; /*16px*/
+    margin: 0;
+    color:white;
+    letter-spacing: 1px;
+    text-shadow: 0px 0px 5px white, 1px 1px 5px rgb(196, 255, 196);
+    width: 40%;
+    text-align: justify;
+}
+.footer {
+    position: relative;
+    width: 100vw;
+    height: max-content;
+    padding-top: 1.5vw;
+    padding-bottom: 1.5vw;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: center;
+}
+.footer_text {
+    color: white;
+    text-shadow: 0px 0px 5px white, 1px 1px 5px rgb(196, 255, 196);
+}
+.footer::before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    background: linear-gradient(rgba(0, 0, 0, 0), black);
+    width: 100vw;
+    height: 50px;
+}
+
+
+@media screen and (max-width: 1000px) and (min-width: 450px) {
+    .first_group {
+        display: flex;
+        justify-content: center;
+    }
+    .front_image {
+        width: auto;
+    }
+    .back_image {
+        width: auto;
+    }
+    .main_heading {
+        font-size: 90px;
+        left: 0;
+    }
+    .sub_heading {
+        font-size: 30px;
+        left: 0;
+    }
+    .second_group_text {
+        font-size: 16px;
+        width: 80vw;
+    }
+    .second_group {
+        background-size: auto 100vh;
+        background-position: center;
+    }
+}
+
+@media screen and (max-width: 449px) {
+    .first_group {
+        display: flex;
+        justify-content: center;
+    }
+    .front_image {
+        width: auto;
+    }
+    .back_image {
+        width: auto;
+    }
+    .main_heading {
+        top: 260px;
+        font-size: 70px;
+        left: 0;
+    }
+    .sub_heading {
+        top: 190px;
+        font-size: 20px;
+        left: 0;
+    }
+    .second_group_text {
+        font-size: 16px;
+        width: 80vw;
+    }
+    .second_group {
+        background-size: auto 100vh;
+        background-position: center;
+    }
+}
